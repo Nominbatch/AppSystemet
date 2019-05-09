@@ -87,10 +87,10 @@ public class MainActivity extends AppCompatActivity {
                 productList .add(m);
                 Log.d(LOG_TAG, " * " + m);
             } catch (JSONException e) {
-                ; // is ok since this is debug
+                 // is ok since this is debug
             }
         }
-        return productList;
+        return productList;  // return list of products 2019-05-06 William
     }
 
     @Override
