@@ -10,6 +10,7 @@ import android.widget.Button;
 public class StartPage extends AppCompatActivity {
 
     private Button buttonUnder20;
+    private Button buttonOver20;
 
 
     @Override
@@ -25,9 +26,18 @@ public class StartPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        buttonOver20=(Button)findViewById(R.id.buttonOver20);
+        buttonOver20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            openNew_main();
+            }
+        });
     }
 
-
-
-
+    public void openNew_main(){
+        Intent intent= new Intent(this,New_main.class);
+        startActivity(intent);
+    }
 }
