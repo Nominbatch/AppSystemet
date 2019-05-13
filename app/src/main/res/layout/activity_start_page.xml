@@ -54,7 +54,7 @@
 
     <!-- hämtar färgen för buttons från colors.xml -->
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonUnder20"
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
