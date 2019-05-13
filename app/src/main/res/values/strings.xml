@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Systembolaget</string>
+    <string name="product_type_prompt">Välj en kategori</string>
+
+    <string-array name="product_type_array">
+        <item>Rött vin</item>
+        <item>Vitt vin</item>
+    </string-array>
+
 </resources>

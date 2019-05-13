@@ -165,8 +165,9 @@ public class MainActivity extends AppCompatActivity {
                 addToMap(arguments, MAX_ALCO, valueFromView(viewInflated, R.id.max_alco_input));
                 addToMap(arguments, MIN_PRICE, valueFromView(viewInflated, R.id.min_price_input));
                 addToMap(arguments, MAX_PRICE, valueFromView(viewInflated, R.id.max_price_input));
+                addToMap(arguments, NAME, valueFromView(viewInflated,R.id.product_name_input));
 
-                // Given the map, s earch for products and update the listview
+                // Given the map, search for products and update the listview
                 searchProducts(arguments);
             }
         });
@@ -198,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, " arguments: " + argumentString);
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://rameau.sandklef.com:9090/search/products/all/" + argumentString;
+
         Log.d(LOG_TAG, "Searching using url: " + url);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
