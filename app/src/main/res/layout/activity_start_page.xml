@@ -56,6 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- hämtar färgen för buttons från colors.xml -->
     <Button
         android:id="@+id/button"
         android:layout_width="139dp"
@@ -64,7 +65,7 @@
         android:textSize="12sp"
         tools:layout_editor_absoluteX="61dp"
         tools:layout_editor_absoluteY="544dp"
-        android:background="#4b9560"/>
+        android:background= "@color/colorBackgroundGreen"/>
 
     <Button
         android:id="@+id/button2"
@@ -74,5 +75,5 @@
         android:textSize="12sp"
         tools:layout_editor_absoluteX="222dp"
         tools:layout_editor_absoluteY="544dp"
-        android:background="#4b9560"/>
+        android:background="@color/colorBackgroundGreen"/>
 </android.support.constraint.ConstraintLayout>

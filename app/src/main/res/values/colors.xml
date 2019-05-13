@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#4b9560</color>
     <!--<new color theme to match Systembolagets design standards -->
     <color name="colorPrimaryDark">#4b9560</color>
     <color name="colorAccent">#4b9560</color>
+
+    <!--our color names :) -->
+    <color name="colorTextGrey">#666666</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+    <color name="colorBackgroundGreen">#4b9560</color>
+
 </resources>
