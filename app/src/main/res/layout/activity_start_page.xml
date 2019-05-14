@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <!-- hämtar färgen för buttons från colors.xml -->
+    <!-- hämtar färgen för buttons och text från colors.xml -->
     <Button
         android:id="@+id/button"
         android:layout_width="140dp"
@@ -62,7 +62,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Jag är under 20 år"
-        android:textColor="#FFFFFFFF"
+        android:textColor="@color/colorTextWhite"
         android:textSize="12sp"
         tools:layout_editor_absoluteX="61dp"
         tools:layout_editor_absoluteY="544dp"
@@ -84,7 +84,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Jag är 20 år eller äldre"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/colorTextWhite"
         android:textSize="12sp"
         tools:layout_editor_absoluteX="222dp"
         tools:layout_editor_absoluteY="544dp"
