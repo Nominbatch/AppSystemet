@@ -46,7 +46,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center_horizontal"
-        android:text="Denns webbsida innehåller information om alkoholdrycker. För inköp och besök på denna webbplats måste du vara 20 år eller äldre. "
+        android:text="Denna webbsida innehåller information om alkoholdrycker. För inköp och besök på denna webbplats måste du vara 20 år eller äldre. "
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,27 +54,7 @@
 
     <!-- hämtar färgen för buttons och text från colors.xml -->
     <Button
-        android:id="@+id/button"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Jag är under 20 år"
-        android:textColor="@color/colorTextWhite"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="544dp"
-        android:background= "@color/colorBackgroundGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.501" />
-
-
-    <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonUnder20"
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -83,16 +63,34 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/colorBackgroundGreen"
+        android:text="Jag är under 20 år"
+        android:textColor="@color/colorTextWhite"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonOver20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.501" />
+
+
+    <Button
+        android:id="@+id/buttonOver20"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorBackgroundGreen"
         android:text="Jag är 20 år eller äldre"
         android:textColor="@color/colorTextWhite"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="544dp"
-        android:background="@color/colorBackgroundGreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/buttonUnder20"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.501" />
 

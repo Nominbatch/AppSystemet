@@ -3,7 +3,7 @@ package com.example.systemetapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class new_main extends AppCompatActivity {
+public class New_main extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
