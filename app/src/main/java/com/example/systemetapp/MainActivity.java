@@ -2,6 +2,7 @@
 package com.example.systemetapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -109,6 +110,13 @@ public class MainActivity extends AppCompatActivity {
             default:
                 Log.d(LOG_TAG, "uh oh ;)");
                 break;
+
+            case R.id.contact:
+                Log.d(LOG_TAG, "user presssed SEARCH");
+                goToNewMain();
+                break;
+
+
         }
         return true;
     }
@@ -253,4 +261,10 @@ public class MainActivity extends AppCompatActivity {
         queue.add(jsonArrayRequest);
 
     }
+
+    public void goToNewMain() {
+        Intent intent = new Intent(this, New_main.class);
+        startActivity(intent);
+    }
+
 }

@@ -12,13 +12,14 @@
 
     <item
         android:id="@+id/action_search"
-        android:title="sök dryck...">
+        android:title="Avancerad sökning">
 
     </item>
 
     <item
-        android:id="@+id/contact_us"
-        android:title="Contact us">
+        android:id="@+id/contact"
+        android:title="Kontakt">
 
     </item>
+
 </menu>
