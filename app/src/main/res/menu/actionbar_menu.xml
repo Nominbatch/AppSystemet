@@ -12,13 +12,13 @@
 
     <item
         android:id="@+id/action_search"
-        android:title="Avancerad sökning">
+        android:title="     Avancerad sökning">
 
     </item>
 
     <item
         android:id="@+id/contact"
-        android:title="Kontakt">
+        android:title="             Kontakt">
 
     </item>
 

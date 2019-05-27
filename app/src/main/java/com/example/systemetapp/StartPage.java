@@ -42,7 +42,7 @@ public class StartPage extends AppCompatActivity {
         buttonOver20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            openNew_main();
+            openMainActivity();
             changePrompt();
 
 //            PROMPT=true;
@@ -50,8 +50,8 @@ public class StartPage extends AppCompatActivity {
         });
     }
 
-    public void openNew_main(){
-        Intent intent= new Intent(this,New_main.class);
+    public void openMainActivity(){
+        Intent intent= new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 //    public static boolean getPrompt(){
