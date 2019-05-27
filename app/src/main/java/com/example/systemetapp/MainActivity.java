@@ -13,12 +13,14 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.systemetapp.domain.Product;
 
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private List<Product> products;
     private ListView listView;
     private ArrayAdapter<Product> adapter;
+//    private String SERVER_URL= "http://10.0.2.2:8080/search/products/all"; //Henrik and rikards server is down...I am running the old Winstone server TAREK
+      private String SERVER_URL="http://rameau.sandklef.com:9090/search/products/all/";
 
     private void createFakedProducts() {
         products = new ArrayList<>();
@@ -112,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.actionbar_menu, menu);
 
-        return true;
+              return true;
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +124,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // set up faked products
-        createFakedProducts();
+        showAllProducts();
+
         // setup listview (and friends)
         setupListView();
     }
@@ -197,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
         // print argument
         Log.d(LOG_TAG, " arguments: " + argumentString);
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://rameau.sandklef.com:9090/search/products/all/" + argumentString;
+        String url =  SERVER_URL + argumentString;
         Log.d(LOG_TAG, "Searching using url: " + url);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
@@ -225,4 +230,27 @@ public class MainActivity extends AppCompatActivity {
         // search for products later on :)
     }
 
+    private void showAllProducts(){
+        products = new ArrayList<>();
+        RequestQueue queue = Volley.newRequestQueue(this);
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+                Request.Method.GET,
+                SERVER_URL,
+                null,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray array) {
+                        products.addAll(jsonToProducts(array));
+                        adapter.notifyDataSetChanged();
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d(LOG_TAG, " cause: " + error.getCause().getMessage());
+            }
+        });
+        queue.add(jsonArrayRequest);
+
+    }
 }
+

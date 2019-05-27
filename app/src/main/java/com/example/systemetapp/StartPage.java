@@ -37,7 +37,7 @@ public class StartPage extends AppCompatActivity {
     }
 
     public void openNew_main(){
-        Intent intent= new Intent(this,New_main.class);
+        Intent intent= new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 }
