@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -32,6 +33,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -77,6 +79,23 @@ public class MainActivity extends AppCompatActivity {
                     android.R.layout.simple_list_item_1,
                     products);
 
+
+            //START
+            listView.setOnItemClickListener(new ListView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent,
+                                        final View view,
+                                        int position /*The position of the view in the adapter.*/,
+                                        long id /* The row id of the item that was clicked */) {
+                    Log.d(LOG_TAG, "item clicked, pos:" + position + " id: " + id);
+
+                    Product p = products.get(position);
+                    Intent intent = new Intent(MainActivity.this, ProductActivity.class);
+                    intent.putExtra("product", p);
+                    startActivity(intent);
+                }
+            });
+            //END
             // Set listView's adapter to the new adapter
             listView.setAdapter(adapter);
         }
@@ -131,7 +150,6 @@ public class MainActivity extends AppCompatActivity {
         SearchView searchView= (SearchView) menuItem.getActionView();
 
 
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -150,9 +168,9 @@ public class MainActivity extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
                 return false;
             }
-        });
 
-              return true;
+        });              return true;
+
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

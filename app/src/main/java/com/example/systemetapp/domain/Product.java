@@ -1,8 +1,9 @@
 package com.example.systemetapp.domain;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
-public class Product {
+public class Product implements Serializable {
 
     private String name;
     private double price; // SEK
@@ -211,4 +212,5 @@ public class Product {
         code = 31 * code + nr;
         return code;
     }
+
 }
