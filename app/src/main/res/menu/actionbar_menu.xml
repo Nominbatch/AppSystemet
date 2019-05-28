@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/search_by_name"
-        android:inputType="textAutoComplete"
+        android:inputType="textCapCharacters"
         android:title="Find By Name"
         android:icon="@android:drawable/ic_menu_search"
         app:showAsAction="always"

@@ -15,7 +15,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.SearchView;
+import android.support.v7.widget.SearchView;
+import android.app.SearchManager;
+import android.widget.SearchView.OnQueryTextListener;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -120,10 +122,35 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+
         @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.actionbar_menu, menu);
+        MenuItem menuItem=menu.findItem(R.id.search_by_name);
+        SearchView searchView= (SearchView) menuItem.getActionView();
+
+
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                ArrayList<Product> results= new ArrayList<>();
+                for(Product product:products){
+                    if (product.name().toLowerCase().contains(newText.toLowerCase()))
+                        results.add(product);
+                }
+                products.clear();
+                products.addAll(results);
+                adapter.notifyDataSetChanged();
+                return false;
+            }
+        });
 
               return true;
     }
