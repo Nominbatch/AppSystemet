@@ -11,7 +11,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="Minsta alkoholmängd, t.ex 4.0" />
+        android:hint="Min. alkoholhalt, t.ex 4.0" />
     <EditText
         android:id="@+id/max_alco_input"
         android:inputType="numberDecimal"
@@ -21,7 +21,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="Största alkoholmängd, t.ex 5.0" />
+        android:hint="Max. alkoholhalt, t.ex 5.0" />
     <EditText
         android:id="@+id/min_price_input"
         android:inputType="numberDecimal"
@@ -31,7 +31,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="Minsta prismängd, t.ex 12" />
+        android:hint="Min. pris, t.ex 20" />
     <EditText
         android:id="@+id/max_price_input"
         android:inputType="numberDecimal"
@@ -41,5 +41,5 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="Största prismängd, t.ex 19" />
+        android:hint="Max. pris, t.ex 100" />
 </LinearLayout>
