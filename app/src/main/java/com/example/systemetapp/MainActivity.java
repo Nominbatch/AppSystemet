@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             // action with ID action_refresh was selected
             case R.id.action_search:
-                Log.d(LOG_TAG, "user presssed SEARCH");
+                Log.d(LOG_TAG, "user pressed SEARCH");
                 showSearchDialog();
                 break;
             default:
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.contact:
-                Log.d(LOG_TAG, "user presssed SEARCH");
+                Log.d(LOG_TAG, "user pressed SEARCH");
                 goToNewMain();
                 break;
 
