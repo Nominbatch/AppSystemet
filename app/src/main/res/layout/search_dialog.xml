@@ -2,44 +2,48 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
+
     <EditText
         android:id="@+id/min_alco_input"
-        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="4dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="Min. alkoholhalt, t.ex 4.0" />
+        android:hint="@string/minAlc"
+        android:inputType="numberDecimal" />
+
     <EditText
         android:id="@+id/max_alco_input"
-        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="4dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="Max. alkoholhalt, t.ex 5.0" />
+        android:hint="@string/maxAlc"
+        android:inputType="numberDecimal" />
+
     <EditText
         android:id="@+id/min_price_input"
-        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="4dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="Min. pris, t.ex 20" />
+        android:hint="@string/minPris"
+        android:inputType="numberDecimal" />
+
     <EditText
         android:id="@+id/max_price_input"
-        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="4dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="Max. pris, t.ex 100" />
+        android:hint="@string/maxPris"
+        android:inputType="numberDecimal" />
 </LinearLayout>

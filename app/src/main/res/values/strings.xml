@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Systembolaget</string>
+    <string name="minAlc">Min. alkoholhalt, t.ex 4.0</string>
+    <string name="maxAlc">Max. alkoholhalt, t.ex 5.0</string>
+    <string name="minPris">Min. pris, t.ex 20</string>
+    <string name="maxPris">Max. pris, t.ex 100</string>
+
 </resources>
